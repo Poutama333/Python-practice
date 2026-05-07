@@ -1,7 +1,3 @@
-input("what is your name")
-print(5 + 5)
-print("5"  "5")
-print(5.0 + 5.0)
-print(5 // 5.0)
-print("5" * 5)
-
+name = "helen"
+age = "15"
+print(name,"is",age)
