@@ -12,12 +12,9 @@ question1 = input("Question 1: \n"
 
 if question1 == "c":
     print("Correct!")
-elif question1 == "a":
+else:
     print("Incorrect")
-elif question1 == "b":
-    print("Incorrect")
-elif question1 == "d":
-    print("Incorrect")
+
 
 question2 = input("Question 2: \n"
 " What is the , is it  \n"
