@@ -1,26 +1,28 @@
 ### Secret Agent Login
+Name = input("what is your name")
+password = input("Create your password")
 # Create a login process for a secret agent
 input("Enter to login")
 # Ask for the user's name and save it in a variable
 name = input("What is your name ")
 # Ask for the password and save it in a variable
-password = input("What is your password ")
+passwordcheck = input("What is your password ")
 # Check if the password == 'Falcon'
-if password == ("Falcon"):
+if passwordcheck == password:
     # Ouput that access has been granted and welcome user using their name
     print("Access granted, Welcome",name)
     # Ask for the user's age and save it in a variable
-age = int(input("What is your age "))
+    age = int(input("What is your age "))
     # Change the age into an integer
     # If the user's age is under 13, tell them they are a spy in training
-if age < 13:
-    print("You're a spy in training")
+    if age < 13:
+        print("You're a spy in training")
     # If their age is under 18, tell them they are a junior spy
-elif age < 18:
-    print("You're a junior spy")
+    elif age < 18:
+        print("You're a junior spy")
     # If their age is 18 or over, tell them they are a Field Agent
-elif age > 18:
-    print("You're a field agent")
+    else:
+        print("You're a field agent")
 # Output a goodbye
 print("goodbye")
 
