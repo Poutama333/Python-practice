@@ -1,0 +1,72 @@
+# Write a 'what animal are you' quiz. 
+# You can base this on the picture from last lesson, but make it simpler - 
+# 3 questions and 4 animals.
+
+print("What animal are you")
+# Ask your user a question about themselves, giving them 2 options
+uglyorno = input("ugly or no? ")
+if uglyorno == "no":
+    skinnyfat = input("skinny or fat? ")
+    if skinnyfat == "fat":
+        chieftain = input("Are you him or her? ")
+        if chieftain == "him":
+            print("EW, you're a slug")
+        else:
+            print("YUCK, you're a snail")
+    else:
+        cityboy = input("Are you a cityboy or no? ")
+        if cityboy == "no":
+            print("LIAR! Cityboy, you are a Nigersaurus")
+        else:
+            print("Cityboy, you are a boops boops fish")
+
+# Check if they picked the first option
+else:
+    coolguy = input("No you aren't. Are you a dog person or a cat person?(dog/cat) ")
+    # Ask the next question
+    if coolguy == "dog":
+        snoodle = input("Are you scared of snakes?(y/n) ")
+        if snoodle == "y":
+            print("You are a Danger noodle")
+        else:
+            print("You are a Cobra chicken")
+    else:
+        nigersaurus = input("Books or movies? ")
+        if nigersaurus == "books":
+            print("My goat, you're a Dragon")
+        else:
+            print("Smart, you're a rat")
+print("Goodbye")
+    # Check if they picked the first option
+
+        # Tell them they're animal 1
+
+    # Otherwise
+
+        # Tell them they're animal 2
+
+# Otherwise
+
+    # Ask the next question
+
+    # Check if they picked the first option
+
+        # Tell them they're animal 3
+
+    # Otherwise
+
+        # Tell them they're animal 4 
+
+# __________________________
+
+# EXTENSION
+# Extend the quiz so there are 8 possible animals
+
+# __________________________
+
+# EXTENSION 2
+# Create a 'Which ??? are you?' Quiz
+# This time allow all questions to have 4 possible answers (a,b,c and d) 
+# and tally how many times they choose each
+# Determine what they are at the end using the letter with the highest tally.
+# Eg. If they picked mostly As, maybe they are Pikachu.
