@@ -20,13 +20,13 @@ if percent == 0:
     print("The",item,"is free")
 # Check if the percentage is less then 10 and say it's a small treat so enjoy
 elif percent <= 10:
-    print("Thats a small treat, enjoy")
+    print("Thats a small treat, enjoy your",item,)
 # Check if it is less than 50 percent and if it is tell them it's a major spend and should sleep on it
 elif percent <= 50:
     print("It's a major spend, you should sleep on it")
 # Check if it's over 100 and if it is tell them they don't have enough money
 elif percent >= 100:
-    print("You can't afford that broke boy.")
+    print("You can't afford that",item," broke boy.")
 # Otherwise, tell them it costs way too much and isn't worth it
 
 # _______________________
