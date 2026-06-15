@@ -20,21 +20,29 @@ question_and_answer_dictionary = [
     {KEY_QUESTION:"What colour is a Zebra?: \n a)Black with white dots \n b)Red and black spots \n c)White with black stripes \n d)Black with white stripes \n",KEY_ANSWER:"d"},
     {KEY_QUESTION:"What team will win the 2026 Ampol state of origin: \n a)New south \n  b)Blue south \n c)Up da blues \n d)Queer land \n", KEY_ANSWER:"a"},
 ]
-while True:
-    for amount_of_questions in question_and_answer_dictionary:     
-        question = input(amount_of_questions[KEY_QUESTION]).lower()
+print("This is a quiz, press a,b,c, or d to select your answer.")
+
+for amount_of_questions in question_and_answer_dictionary:     
+    while True:    
+        question = input(amount_of_questions[KEY_QUESTION]).lower().strip()
         if question == (amount_of_questions[KEY_ANSWER]):
             print("Nice, You got it correct \n")
             correct += 1
+            break
         elif question == "a" or question == "b" or question == "c" or question == "d":
             print("Sorry, you got it incorrect.")
-            incorrect += 1
+            incorrect += 1 
+            break
         else:
-            invalid = input("Sorry, thats an invalid input, try typing a letter (a,b,c,d). Press a to restart the whole quiz or press b to repeat the question. ").lower()
-            if invalid == "a":
-                break
-            elif invalid == "b":
-                continue
+            print("Sorry, that was invalid. Press a,b,c, or d to select your answer. ")
+            continue
+            
+                 
+                   
+                
+                    
+
+               
 
     
 print("Nice, you've finished the quiz. You got",correct,"questions correct, and",incorrect,"questions incorrect.")
