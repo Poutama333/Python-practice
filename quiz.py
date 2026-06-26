@@ -1,51 +1,64 @@
-    # Quiz
 
-#while True: 
-#    
-#        # Question
-#    question1 = input("Question 1: \n"
-#        " What is the capital city of New Zealand, is it  \n"
-#        " a) Russel  \n"
-#        " b) Christchurch \n"
-#        " c) Wellington  \n"
-#        " d) Auckland \n").lower()
-correct = 0
-incorrect = 0
-KEY_QUESTION = "question"
-KEY_ANSWER = "answer"
-question_and_answer_dictionary = [
+
+"""Constants"""
+
+
+
+
+
+"""Functions"""
+
+def quiz_loop():
+    
+    correct = 0
+
+    incorrect = 0
+
+    KEY_QUESTION = "question"
+
+    KEY_ANSWER = "answer"
+
+
+    question_and_answer_dictionary = [
     {KEY_QUESTION:"What is the fastest animal on earth is it: \n a)Cheetah \n b)Panther \n c)Peregrine Falcon \n d)Pigeon \n",KEY_ANSWER:"c"},
     {KEY_QUESTION:"What is the capital of New Zealand is it: \n a)Auckland \n b)Russel \n c)Christurch \n d)Wellington \n",KEY_ANSWER:"d"},
     {KEY_QUESTION:"What does KHCL stand for: \n a)Keith Hunter central Learning \n b) Ken Havill Centre for Learning \n c) Kool Hlucks Clan Location \n d)Kiev Hiev Ciev Liev \n",KEY_ANSWER:"b"},
     {KEY_QUESTION:"What colour is a Zebra?: \n a)Black with white dots \n b)Red and black spots \n c)White with black stripes \n d)Black with white stripes \n",KEY_ANSWER:"d"},
-    {KEY_QUESTION:"What team will win the 2026 Ampol state of origin: \n a)New south \n  b)Blue south \n c)Up da blues \n d)Queer land \n", KEY_ANSWER:"a"},
+    {KEY_QUESTION:"What is 9+9x3(2-8): \n a) -153  \n b)153 \n c) 60 \n d) -60 \n", KEY_ANSWER:"a"},
 ]
-print("This is a quiz, press a,b,c, or d to select your answer.")
 
-for amount_of_questions in question_and_answer_dictionary:     
-    while True:    
-        question = input(amount_of_questions[KEY_QUESTION]).lower().strip()
-        if question == (amount_of_questions[KEY_ANSWER]):
-            print("Nice, You got it correct \n")
-            correct += 1
-            break
-        elif question == "a" or question == "b" or question == "c" or question == "d":
-            print("Sorry, you got it incorrect.")
-            incorrect += 1 
-            break
-        else:
-            print("Sorry, that was invalid. Press a,b,c, or d to select your answer. ")
-            continue
-            
+    for amount_of_questions in question_and_answer_dictionary:     
+        while True:    
+            question = input(amount_of_questions[KEY_QUESTION]).lower().strip()
+
+            if question == (amount_of_questions[KEY_ANSWER]):
+
+                print("Nice, You got it correct \n")
+                correct += 1
+                break
+
+            elif question == "a" or question == "b" or question == "c" or question == "d":
+
+                print("Sorry, you got it incorrect.")
+                incorrect += 1 
+                break
+
+            else:
+
+                print("Sorry, that was invalid. Press a,b,c, or d to select your answer. ")
+                continue
+
+    return correct,incorrect      
                  
-                   
-                
-                    
+"""Main"""        
 
-               
-
+def main():
+    print("This is a quiz, press a,b,c, or d to select your answer.")
     
-print("Nice, you've finished the quiz. You got",correct,"questions correct, and",incorrect,"questions incorrect.")
+    results = quiz_loop()
+                    
+    print("Nice, you've finished the quiz. You got",results[0],"questions correct, and",results[1],"questions incorrect.")
 
         
    
+main()
