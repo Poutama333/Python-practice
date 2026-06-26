@@ -1,4 +1,8 @@
 
+"""Constants"""
+
+KEY_QUESTION = "question"
+KEY_ANSWER = "answer"
 
 """Functions"""
 
@@ -8,9 +12,7 @@ def quiz_loop():
 
     incorrect = 0
 
-    KEY_QUESTION = "question"
-
-    KEY_ANSWER = "answer"
+    
 
 
     question_and_answer_dictionary = [
