@@ -21,12 +21,12 @@ def quiz_loop():
     {KEY_QUESTION:"What is 9+9x3(2-8): \n a) -153  \n b)153 \n c) 60 \n d) -60 \n", KEY_ANSWER:"a"},
     ]
     while True:
-        play = input("Would you like to play my quiz? y/n").strip().lower()
-        if play != "y" or play != "n":
-            print("Invalid, try again")
-            continue
-        else:
+        play = input("Would you like to play my quiz? y/n ").strip().lower()
+        if play == "y" or play == "n":
             break
+        else:
+            print("Invalid, press y or n.")
+            continue
 
     while play == "y":
         for amount_of_questions in question_and_answer_dictionary:     
@@ -50,12 +50,12 @@ def quiz_loop():
                     print("Sorry, that was invalid. Press a,b,c, or d to select your answer. ")
                     continue
         while True:
-            play = input("Press y to play again, press n to end.").strip().lower()  
-            if play != "y" or play != "n":
-                print("Invalid, try again")
-                continue
-            else:
+            play = input("Press y to play again, press n to end. ").strip().lower()  
+            if play == "y" or play == "n":
                 break
+            else:
+                print("Invalid, press y or n.")
+                continue
         
 
     return correct,incorrect      
